@@ -50,6 +50,7 @@ public class Main {
             System.out.println("Месяц " + month4 + ", сумма накоплений равна " + sum4 + " рублей");}
 
 
+
         System.out.println("Задача 5");
         int needOverallSum5 = 12000000;
         int percent5 = 70 / 100;
