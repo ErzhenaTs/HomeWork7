@@ -6,14 +6,11 @@ public class Main {
         int needOverallSum = 2459000;
         int sum = 0;
         int monthSum = 15000;
-        double percent = 10 / 100;
         int month = 0;
         while (sum < needOverallSum) {
             sum += monthSum;
-            sum = (int) (sum * (1 + percent));
             month++;
-            System.out.println("Месяц " + month + ", сумма накоплений равна" + sum + " рублей");
-
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + sum + " рублей");
         }
 
         System.out.println("Задача 2");
@@ -40,41 +37,43 @@ public class Main {
 
         System.out.println("Задача 4");
         int needOverallSum4 = 12000000;
-        int percent4 = 70 / 100;
+        double percent4 = 1.07;
         int month4 = 0;
         int sum4 = 0;
         int monthSum4 = 15000;
             while (sum4 < needOverallSum4) {
-                sum4 = sum4 * (1 + percent4) + monthSum4;
+                sum4 = (int) (sum4 * percent4 + monthSum4);
                 month4++;
             System.out.println("Месяц " + month4 + ", сумма накоплений равна " + sum4 + " рублей");}
 
 
 
         System.out.println("Задача 5");
-        int needOverallSum5 = 12000000;
+        int needOverAllSum5 = 12000000;
         int percent5 = 70 / 100;
         int month5 = 0;
         int sum5 = 0;
         int monthSum5 = 15000;
-        while (sum5 < needOverallSum5) {
+        while (sum5 < needOverAllSum5) {
             sum5 = sum5 * (1 + percent5) + monthSum5;
             month5++;
             if (month5 % 6 == 0)
-            System.out.println("Месяц " + month5 + ", сумма накоплений равна " + sum5 + " рублей");}
+                System.out.println("Месяц " + month5 + ", сумма накоплений равна " + sum5 + " рублей");}
 
 
         System.out.println("Задача 6");
-        int percent6 = 70 / 100;
+        int deposit = 15000;
         int month6 = 0;
-        int sum6 = 0;
-        int monthSum6 = 15000;
-        for (int year6 = 1; year6 <=9; year6 ++){
-            for (int anotherMonth6 = 1; anotherMonth6 <=6; anotherMonth6++) {
-                sum6 = sum6 * (1 + percent6) + monthSum6;
-                month6++;
+        int months6 = 12*9;
+        while (month6 < months6) {
+            deposit = (int) (deposit * 1.07);
+            month6++;
+            if (month6 % 6 == 0) {
+                System.out.println("Месяц " + month6 + ", сумма накоплений равна " + deposit + " рублей");
+            }
         }
-            System.out.println("Месяц " + month6 + ", сумма накоплений равна " + sum6 + " рублей");}
+
+
 
 
         System.out.println("Задача 7");
