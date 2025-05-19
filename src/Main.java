@@ -75,7 +75,6 @@ public class Main {
 
 
 
-
         System.out.println("Задача 7");
         int firstFriday = 2;
         for (int day = firstFriday; day <= 31; day += 7) {
